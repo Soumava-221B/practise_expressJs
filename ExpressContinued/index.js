@@ -1,12 +1,18 @@
 const express = require('express');
+const userRoutes = require('./routes/userRoutes');
+// const productRoutes = require('./routes/productRoutes');
 const app = express();
 
 const port = 5000;
 
-app.get('/', (req, res) => {
-    
-})
+app.use(express.json);
 
+app.use('/user', userRoutes);
+// app.use('/product', productRoutes)
+
+app.get('/', (req, res) => {
+    res.json({"status":"up and running!"})
+})
 
 // two types of routes
 // 1. users routes
