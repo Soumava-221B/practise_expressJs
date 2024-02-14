@@ -1,11 +1,10 @@
 const express = require('express');
 const userRoutes = require('./routes/userRoutes');
 // const productRoutes = require('./routes/productRoutes');
+require('./config/dbConfig');
+
 const app = express();
-
 const port = 5000;
-
-app.use(express.json);
 
 app.use('/user', userRoutes);
 // app.use('/product', productRoutes)
