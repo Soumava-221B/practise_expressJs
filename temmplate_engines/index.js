@@ -9,7 +9,7 @@ app.use(express.static('public'));
 app.get('/', (req, res) => {
     // console.log(__dirname)
     // res.sendFile(__dirname + '/welcome.ejs')
-    res.render('welcome.ejs', { user: "Soumava" })
+    res.render('welcome.ejs', { user: "Soumava", condition:true })
 })
 
 app.get('/users', (req, res) => {
